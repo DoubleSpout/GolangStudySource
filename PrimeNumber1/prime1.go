@@ -49,3 +49,12 @@ func main() {
   }
 }
 
+/*
+代码简要说明：
+main函数入口，执行sieve函数，返回out ch
+这样代码很清晰，main函数只是执行循环，等待primes的生产，然后消费不停的循环
+sieve开始执行，定义 out ch，在sieve里执行一个线程闭包，获得generate的ch
+执行循环，prime等待generate的生产
+下面同prime前一个例子相同，只是filter的out步是filter里生成的，ch的赋值不再通过直接赋值ch1来实现，而是通过函数的返回值来实现
+
+*/
